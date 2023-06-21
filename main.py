@@ -63,7 +63,7 @@ while True:
 		game.mostrar_fondo(screen)
 		#screen.blit(game.background_scaled,(11,11))
 		screen.blit(game.score_surface, (365, 20, 50, 50))
-		screen.blit(game.next_surface, (375, 180, 50, 50))
+		screen.blit(game.next_surface, (365, 180, 50, 50))
 
 		if game.game_over == True:
 			screen.blit(game_over_surface, (320, 450, 50, 50))
@@ -74,6 +74,9 @@ while True:
 			#screen.blit(game_over_menu,game_menu_rect)
 			game.is_playing = False
 			game.game_over = False
+			pygame.mixer.music.stop()
+			game.bandera_musica = False
+
 			
 		game.dibujar_score(screen,score_value_surface)
 		game.dibujar_proxima_figura(screen)

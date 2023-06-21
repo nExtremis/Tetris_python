@@ -25,7 +25,7 @@ class Game:
 		self.score_surface = self.title_font.render("Score", True, Colors.white)
 		self.score_rect = pygame.Rect(320, 55, 170, 60)
 		self.next_surface = self.title_font.render("Next", True, Colors.white)
-		self.next_rect = pygame.Rect(270, 215, 170, 180)
+		self.next_rect = pygame.Rect(320, 215, 170, 180)
 		self.font_path = "./font/font.ttf"
 		self.title_font_score = pygame.font.Font(self.font_path, 40)
 		self.rotate_sound = pygame.mixer.Sound("Sounds/rotate.ogg")
@@ -303,9 +303,9 @@ class Game:
 		self.current_block.draw(screen, 11, 11)
 		
 		if self.next_block.id == 3:
-			self.next_block.draw(screen, 255, 290)
+			self.next_block.draw(screen, 330, 290)
 		elif self.next_block.id == 4:
-			self.next_block.draw(screen, 255, 280)
+			self.next_block.draw(screen, 330, 280)
 		else:
     		
-			self.next_block.draw(screen, 270, 270)
+			self.next_block.draw(screen, 300, 270)
