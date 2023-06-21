@@ -208,6 +208,10 @@ class Game:
 			self.score += 300
 		elif lines_cleared == 3:
 			self.score += 500
+		elif lines_cleared == 4:
+			self.score += 600
+		elif lines_cleared == 5:
+			self.score += 600	
 		self.score += move_down_points
 
 		if self.score >= self.level * POINTS_PER_LEVEL:
